@@ -1,0 +1,14 @@
+01:13:26 **** Incremental Build of configuration Debug for project LTDC_Display_1Layer ****
+make -j4 all 
+arm-none-eabi-size   STM32746G_DISCOVERY.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 267592	     20	   1740	 269352	  41c28	STM32746G_DISCOVERY.elf
+Finished building: default.size.stdout
+ 
+01:13:40 **** Incremental Build of configuration Debug for project LTDC_Display_1Layer ****
+make -j4 all 
+arm-none-eabi-size   STM32746G_DISCOVERY.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 267592	     20	   1740	 269352	  41c28	STM32746G_DISCOVERY.elf
+Finished building: default.size.stdout
+ 

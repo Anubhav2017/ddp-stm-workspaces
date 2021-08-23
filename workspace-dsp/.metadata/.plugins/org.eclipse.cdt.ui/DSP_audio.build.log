@@ -1,0 +1,68 @@
+16:14:52 **** Incremental Build of configuration Debug for project DSP_audio ****
+make -j4 all 
+arm-none-eabi-gcc "../USB_HOST/Target/usbh_conf.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../USB_HOST/App -I../USB_HOST/Target -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"USB_HOST/Target/usbh_conf.d" -MT"USB_HOST/Target/usbh_conf.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/Target/usbh_conf.o"
+arm-none-eabi-gcc "../USB_HOST/App/usb_host.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../USB_HOST/App -I../USB_HOST/Target -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"USB_HOST/App/usb_host.d" -MT"USB_HOST/App/usb_host.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/App/usb_host.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/option/syscall.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../USB_HOST/App -I../USB_HOST/Target -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/option/syscall.d" -MT"Middlewares/Third_Party/FatFs/src/option/syscall.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/option/syscall.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/diskio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../USB_HOST/App -I../USB_HOST/Target -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/diskio.d" -MT"Middlewares/Third_Party/FatFs/src/diskio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/diskio.o"
+In file included from ../USB_HOST/Target/usbh_conf.h:33,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:28,
+                 from ../USB_HOST/Target/usbh_conf.c:23:
+../Core/Inc/main.h:70:1: warning: multi-line comment [-Wcomment]
+   70 | //#define TIM_MEASURE_END time_end = SysTick->VAL;            \
+      | ^
+In file included from ../FATFS/Target/ffconf.h:27,
+                 from ../Middlewares/Third_Party/FatFs/src/option/../ff.h:29,
+                 from ../Middlewares/Third_Party/FatFs/src/option/syscall.c:24:
+../Core/Inc/main.h:70:1: warning: multi-line comment [-Wcomment]
+   70 | //#define TIM_MEASURE_END time_end = SysTick->VAL;            \
+      | ^
+In file included from ../FATFS/Target/ffconf.h:27,
+                 from ../Middlewares/Third_Party/FatFs/src/ff.h:29,
+                 from ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:29,
+                 from ../Middlewares/Third_Party/FatFs/src/diskio.c:15:
+../Core/Inc/main.h:70:1: warning: multi-line comment [-Wcomment]
+   70 | //#define TIM_MEASURE_END time_end = SysTick->VAL;            \
+      | ^
+../USB_HOST/Target/usbh_conf.c: In function 'HAL_HCD_MspInit':
+../USB_HOST/Target/usbh_conf.c:78:27: error: 'OTG_FS_P_Pin' undeclared (first use in this function); did you mean 'OTG_FS_IRQn'?
+   78 |     GPIO_InitStruct.Pin = OTG_FS_P_Pin|OTG_FS_N_Pin|OTG_FS_ID_Pin;
+      |                           ^~~~~~~~~~~~
+      |                           OTG_FS_IRQn
+../USB_HOST/Target/usbh_conf.c:78:27: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../USB_HOST/Target/usbh_conf.h:33,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:28,
+                 from ../USB_HOST/App/usb_host.c:25:
+../Core/Inc/main.h:70:1: warning: multi-line comment [-Wcomment]
+   70 | //#define TIM_MEASURE_END time_end = SysTick->VAL;            \
+      | ^
+../USB_HOST/Target/usbh_conf.c:78:40: error: 'OTG_FS_N_Pin' undeclared (first use in this function); did you mean 'OTG_FS_IRQn'?
+   78 |     GPIO_InitStruct.Pin = OTG_FS_P_Pin|OTG_FS_N_Pin|OTG_FS_ID_Pin;
+      |                                        ^~~~~~~~~~~~
+      |                                        OTG_FS_IRQn
+../USB_HOST/Target/usbh_conf.c:78:53: error: 'OTG_FS_ID_Pin' undeclared (first use in this function); did you mean 'OTG_FS_IRQn'?
+   78 |     GPIO_InitStruct.Pin = OTG_FS_P_Pin|OTG_FS_N_Pin|OTG_FS_ID_Pin;
+      |                                                     ^~~~~~~~~~~~~
+      |                                                     OTG_FS_IRQn
+../USB_HOST/App/usb_host.c: In function 'MX_USB_HOST_Init':
+../USB_HOST/App/usb_host.c:78:5: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+   78 |     Error_Handler();
+      |     ^~~~~~~~~~~~~
+../USB_HOST/Target/usbh_conf.c: In function 'HAL_HCD_MspDeInit':
+../USB_HOST/Target/usbh_conf.c:112:28: error: 'OTG_FS_P_Pin' undeclared (first use in this function); did you mean 'OTG_FS_IRQn'?
+  112 |     HAL_GPIO_DeInit(GPIOA, OTG_FS_P_Pin|OTG_FS_N_Pin|OTG_FS_ID_Pin);
+      |                            ^~~~~~~~~~~~
+      |                            OTG_FS_IRQn
+../USB_HOST/Target/usbh_conf.c:112:41: error: 'OTG_FS_N_Pin' undeclared (first use in this function); did you mean 'OTG_FS_IRQn'?
+  112 |     HAL_GPIO_DeInit(GPIOA, OTG_FS_P_Pin|OTG_FS_N_Pin|OTG_FS_ID_Pin);
+      |                                         ^~~~~~~~~~~~
+      |                                         OTG_FS_IRQn
+../USB_HOST/Target/usbh_conf.c:112:54: error: 'OTG_FS_ID_Pin' undeclared (first use in this function); did you mean 'OTG_FS_IRQn'?
+  112 |     HAL_GPIO_DeInit(GPIOA, OTG_FS_P_Pin|OTG_FS_N_Pin|OTG_FS_ID_Pin);
+      |                                                      ^~~~~~~~~~~~~
+      |                                                      OTG_FS_IRQn
+make: *** [USB_HOST/Target/subdir.mk:22: USB_HOST/Target/usbh_conf.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+16:14:54 Build Failed. 8 errors, 5 warnings. (took 2s.194ms)
+

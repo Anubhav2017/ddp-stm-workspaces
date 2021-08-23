@@ -1,0 +1,10 @@
+01:04:26 **** Incremental Build of configuration Debug for project TFLITE-TEST ****
+make -j4 all 
+arm-none-eabi-size   TFLITE-TEST.elf 
+   text	   data	    bss	    dec	    hex	filename
+  96084	 205748	  53464	 355296	  56be0	TFLITE-TEST.elf
+Finished building: default.size.stdout
+ 
+
+01:04:29 Build Finished. 0 errors, 0 warnings. (took 3s.451ms)
+

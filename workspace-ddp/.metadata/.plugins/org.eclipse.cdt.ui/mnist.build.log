@@ -1,0 +1,11 @@
+17:03:25 **** Incremental Build of configuration Debug for project mnist ****
+make -j4 all 
+arm-none-eabi-g++ -o "mnist.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\agarw\STM32CubeIDE\workspace-ddp\mnist\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mnist.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: mnist.elf section `.data' will not fit in region `RAM'
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: region `RAM' overflowed by 119512 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:88: mnist.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+17:03:29 Build Failed. 3 errors, 0 warnings. (took 3s.942ms)
+

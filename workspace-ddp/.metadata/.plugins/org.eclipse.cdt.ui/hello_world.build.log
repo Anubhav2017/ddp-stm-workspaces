@@ -1,0 +1,10 @@
+13:07:16 **** Incremental Build of configuration Release for project hello_world ****
+make -j4 all 
+arm-none-eabi-size   hello_world.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44292	    492	   4184	  48968	   bf48	hello_world.elf
+Finished building: default.size.stdout
+ 
+
+13:07:17 Build Finished. 0 errors, 0 warnings. (took 973ms)
+

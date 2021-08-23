@@ -1,0 +1,10 @@
+01:02:52 **** Incremental Build of configuration Debug for project STSW-STLKT01-DataLog ****
+make -j4 all 
+arm-none-eabi-size   STM32L476RG_NUCLEO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84736	   1192	  26328	 112256	  1b680	STM32L476RG_NUCLEO.elf
+Finished building: default.size.stdout
+ 
+
+01:02:52 Build Finished. 0 errors, 0 warnings. (took 649ms)
+

@@ -1,14 +1,41 @@
-01:13:26 **** Incremental Build of configuration Debug for project LTDC_Display_1Layer ****
-make -j4 all 
-arm-none-eabi-size   STM32746G_DISCOVERY.elf 
+16:57:48 **** Incremental Build of configuration Debug for project f401-mnist ****
+make -j7 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/tensorflow_lite" -I"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/tensorflow_lite/third_party/flatbuffers/include" -I"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/tensorflow_lite/third_party/gemmlowp" -I"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/tensorflow_lite/third_party/ruy" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "f401-mnist.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f401-mnist.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: f401-mnist.elf
+ 
+arm-none-eabi-size   f401-mnist.elf 
+arm-none-eabi-objdump -h -S  f401-mnist.elf  > "f401-mnist.list"
+arm-none-eabi-objcopy  -O binary  f401-mnist.elf  "f401-mnist.bin"
    text	   data	    bss	    dec	    hex	filename
- 267592	     20	   1740	 269352	  41c28	STM32746G_DISCOVERY.elf
+  95176	  27536	  53400	 176112	  2aff0	f401-mnist.elf
 Finished building: default.size.stdout
  
-01:13:40 **** Incremental Build of configuration Debug for project LTDC_Display_1Layer ****
-make -j4 all 
-arm-none-eabi-size   STM32746G_DISCOVERY.elf 
+Finished building: f401-mnist.bin
+ 
+Finished building: f401-mnist.list
+ 
+17:03:07 **** Incremental Build of configuration Debug for project f401-mnist ****
+make -j7 all 
+arm-none-eabi-size   f401-mnist.elf 
    text	   data	    bss	    dec	    hex	filename
- 267592	     20	   1740	 269352	  41c28	STM32746G_DISCOVERY.elf
+  95176	  27536	  53400	 176112	  2aff0	f401-mnist.elf
 Finished building: default.size.stdout
+ 
+17:07:03 **** Incremental Build of configuration Debug for project f401-mnist ****
+make -j7 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/tensorflow_lite" -I"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/tensorflow_lite/third_party/flatbuffers/include" -I"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/tensorflow_lite/third_party/gemmlowp" -I"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/tensorflow_lite/third_party/ruy" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "f401-mnist.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/anubhav/Desktop/ddp-stm-workspaces/workspace-ddp/f401-mnist/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f401-mnist.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: f401-mnist.elf
+ 
+arm-none-eabi-size   f401-mnist.elf 
+arm-none-eabi-objdump -h -S  f401-mnist.elf  > "f401-mnist.list"
+arm-none-eabi-objcopy  -O binary  f401-mnist.elf  "f401-mnist.bin"
+   text	   data	    bss	    dec	    hex	filename
+  95176	  27536	  53400	 176112	  2aff0	f401-mnist.elf
+Finished building: default.size.stdout
+ 
+Finished building: f401-mnist.bin
+ 
+Finished building: f401-mnist.list
  

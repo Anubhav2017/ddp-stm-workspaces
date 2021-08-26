@@ -1,0 +1,2 @@
+stm32f7xx_hal_msp.c:53:6:HAL_QSPI_MspInit	88	static
+stm32f7xx_hal_msp.c:145:6:HAL_QSPI_MspDeInit	8	static

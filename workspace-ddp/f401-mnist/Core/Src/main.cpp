@@ -62,7 +62,7 @@ namespace {
   // Create an area of memory to use for input, output, and other TensorFlow
   // arrays. You'll need to adjust this by compiling, running, and looking
   // for errors.
-  constexpr int kTensorArenaSize = 50 * 1024;
+  constexpr int kTensorArenaSize = 75 * 1024;
   __attribute__((aligned(16)))uint8_t tensor_arena[kTensorArenaSize];
 } // namespace
 /* USER CODE END PV */
@@ -135,29 +135,29 @@ int main(void)
   	 error_reporter->Report("Model version does not match Schema");
   	 while(1);
     }
+//    static tflite::AllOpsResolver resolver;
+    static tflite::MicroMutableOpResolver<4> resolver;
 
-    static tflite::MicroMutableOpResolver<3> micro_op_resolver;
-
-    tflite_status = micro_op_resolver.AddConv2D();
+    tflite_status = resolver.AddConv2D();
     if (tflite_status != kTfLiteOk)
     {
     	error_reporter->Report("Could not add Conv2D op");
     	while(1);
     }
 
-    tflite_status = micro_op_resolver.AddReshape();
+    tflite_status = resolver.AddReshape();
     if (tflite_status != kTfLiteOk)
     {
       error_reporter->Report("Could not add RESHAPE op");
     	while(1);
     }
-    tflite_status = micro_op_resolver.AddFullyConnected();
+    tflite_status = resolver.AddFullyConnected();
         if (tflite_status != kTfLiteOk)
         {
           error_reporter->Report("Could not add FULLY CONNECTED op");
         	while(1);
         }
-    tflite_status = micro_op_resolver.AddSoftmax();
+    tflite_status = resolver.AddSoftmax();
     if (tflite_status != kTfLiteOk)
     {
   	error_reporter->Report("Could not add SOFTMAX op");
@@ -166,7 +166,7 @@ int main(void)
 
     // Build an interpreter to run the model with.
     static tflite::MicroInterpreter static_interpreter(
-        model, micro_op_resolver, tensor_arena, kTensorArenaSize, error_reporter);
+        model, resolver, tensor_arena, kTensorArenaSize, error_reporter);
     interpreter = &static_interpreter;
 
     tflite_status = interpreter->AllocateTensors();
@@ -398,6 +398,10 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+extern "C" void DebugLog(const char* s)
+{
+  HAL_UART_Transmit(&huart2, (uint8_t *)s, strlen(s), 100);
+}
 /* USER CODE END 4 */
 
 /**

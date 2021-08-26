@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:f401-mnist Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:f401-mnist Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:sine_model Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TFLITE-TEST\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TFLITE-TEST\ Debug/activeLaunchTarget=null\:---
@@ -11,3 +11,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:hello_world\ Debug/activeLaunch
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:hello_world\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mnist/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mnist/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:sine_model\ Debug/activeLaunchMode=run
